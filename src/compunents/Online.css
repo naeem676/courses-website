@@ -4,5 +4,7 @@
 .coures-container{
     border-right: 1px solid gray;
     width:70%;
-    text-align: center;
+}
+.cart-container{
+    margin-left: 50px;
 }

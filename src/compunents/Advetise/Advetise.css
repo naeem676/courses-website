@@ -1,17 +1,22 @@
 .advetise{
+    display:flex;
     border-bottom: 1px solid gray;
     margin:10px;
     padding:10px;
 }
-.advetise h1{
+.discription{
+    margin-left: 50px;
+}
+.discription h1{
     color: blue;
 }
-.advetise h3{
+.discription h3{
     color: brown;
 }
-.advetise button{
-    background-color:gold;
+.discription button{
+    background-color:goldenrod;
     width: 200px;
     padding:5px;
-    border:none;
+    border:gray;
+    font-size: 15px;
 }

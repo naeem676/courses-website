@@ -46,7 +46,7 @@ var courses =  [
       },
       {
         "name": "Business",
-        "price":199.00,
+        "price":189.00,
         "email": "brad.gibson@example.com",
         "date": "1993-07-20T09:44:18.674Z",
         "phone": "011-962-7516",
