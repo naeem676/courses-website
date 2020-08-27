@@ -1,0 +1,18 @@
+.advetise{
+    border: 1px solid gray;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+.advetise h1{
+    color: blue;
+}
+.advetise h3{
+    color:orange;
+}
+.advetise button{
+    background-color:gold;
+    width: 200px;
+    padding:5px;
+    border:none;
+}
