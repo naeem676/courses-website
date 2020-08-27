@@ -1,4 +1,5 @@
 import React from 'react';
+import Button from 'react-bootstrap/Button';
 import './cart.css';
 
 const Cart = (props) => {
@@ -11,7 +12,7 @@ const Cart = (props) => {
          <h4>Courses Ordered: {cart.length}</h4>
          <h5>Tax : ${tax}</h5>
          <h4>total price: ${total + tax}</h4>
-         <button>review your Order</button>
+         <Button variant="outline-primary">review your Order</Button>
 
             
         </div>
