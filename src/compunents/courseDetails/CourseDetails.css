@@ -1,0 +1,15 @@
+.advetise{
+    display:flex;
+    border-bottom: 1px solid gray;
+    margin:10px;
+    padding:10px;
+}
+.discription{
+    margin-left: 50px;
+}
+.discription h1{
+    color: blue;
+}
+.discription h3{
+    color: brown;
+}
