@@ -6,13 +6,22 @@ import '../Online.css';
 import ReviewItem from '../../ReviewItem/ReviewItem';
 import Cart from '../cart/Cart';
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import {useHistory } from 'react-router-dom';
+
 
 
 
 
 const Review = () => {
   const [cart, setCart] = useState([]);
+  const [placeHolder, setPlaceHolder] = useState(false)
+
+  const history = useHistory();
+
+  const handlProcesChake = () => {
+    history.push('/shipment')
+    
+  }
 
   const removeCourse = (courseKey) => {
     const newCart = cart.filter(cos => cos.key !== courseKey)
@@ -36,12 +45,15 @@ const Review = () => {
        
      
          }, []);
+
+       
          
           
 
     return (
 
       <div className="online">
+      
       <div className="coures-container">
       {
         cart.map( cos =>
@@ -50,14 +62,16 @@ const Review = () => {
                    
          )
       }
+      
 
       </div>
       <div className="cart-container">
       <Cart cart={cart}>
-      <Link to="shipment"> <Button variant="primary">place holder</Button></Link>
+      <Button onClick={handlProcesChake} variant="primary">Process checkout</Button>
       </Cart>
        
       </div>
+      
      
 
 

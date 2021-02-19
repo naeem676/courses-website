@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createContext, useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './compunents/header/Header';
@@ -14,18 +14,25 @@ import Inventory from './compunents/inventory/Inventory';
 import LogIn from './compunents/login/LogIn';
 import CourseDetails from './compunents/courseDetails/CourseDetails';
 import Shipment from './compunents/Shipment/Shipment';
+import PrivateRoute from './compunents/PrivateRoute/PrivateRoute';
 
 
 
-
+export const UserContext = createContext();
 
 
 function App () {
+  const [logInUser, setLogInUser] = useState({});
   return (
-    <div className="App">
+    <UserContext.Provider value={[logInUser, setLogInUser]} className="App">
+
+    <h2>Email:{logInUser.email}</h2>
+    
+
     
     <Router>
     <Header></Header>
+    
       <Switch>
         <Route exact path='/'>
           
@@ -44,9 +51,11 @@ function App () {
          <Review></Review>
 
         </Route>
-        <Route path='/shipment'>
+
+        <PrivateRoute path='/shipment'>
         <Shipment></Shipment>
-       </Route>
+       </PrivateRoute>
+       
        <Route path='/login'>
         <LogIn></LogIn>
        </Route>
@@ -54,9 +63,9 @@ function App () {
        
        </Route>
 
-        <Route path='/manage'>
+        <PrivateRoute path='/manage'>
         <Inventory></Inventory>
-        </Route>
+        </PrivateRoute>
         <Route path='/course/:courseKey'>
         <CourseDetails></CourseDetails>
     
@@ -72,7 +81,7 @@ function App () {
     </Router>
     
       
-    </div>
+    </UserContext.Provider>
   );
 }
 
