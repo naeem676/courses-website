@@ -22,6 +22,8 @@ const Review = () => {
     history.push('/shipment')
     
   }
+  
+ 
 
   const removeCourse = (courseKey) => {
     const newCart = cart.filter(cos => cos.key !== courseKey)

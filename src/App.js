@@ -26,7 +26,7 @@ function App () {
   return (
     <UserContext.Provider value={[logInUser, setLogInUser]} className="App">
 
-    <h2>Email:{logInUser.email}</h2>
+   
     
 
     

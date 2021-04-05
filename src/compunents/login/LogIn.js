@@ -105,7 +105,7 @@ const LogIn = () => {
 
   return (
     <div style={{textAlign: 'center'}} >
-        {
+   {
       user.isSignIn ? <button onClick={googleHandleSignOut}>sign out</button> :
       <button onClick={googleHandleSignIn}>sign in</button>
     }
